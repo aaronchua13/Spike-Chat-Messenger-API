@@ -96,7 +96,7 @@ io.on('connection', socket => {
             size: file.size,
             file_name: file.file_name
           })
-          fs.createReadStream(filepath).pipe(outboundStream)
+      fs.createReadStream(filepath).pipe(outboundStream)
       });
   });
   
@@ -105,8 +105,6 @@ io.on('connection', socket => {
   })
 })
 
-
-// console.log that your server is up and running
 server.listen(port, () => console.log(`Listening on port ${port}`));
 
 
